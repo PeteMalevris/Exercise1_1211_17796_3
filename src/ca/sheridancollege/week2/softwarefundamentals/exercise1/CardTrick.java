@@ -58,6 +58,7 @@ public class CardTrick {
         user_card.setSuit(user_card.SUITS[suit]);
         
         //add print user card
+        System.out.println("Card Picked: " + user_card.getValue() + " of " + user_card.getSuit());
         
         // and search magicHand here
         boolean found = false;
