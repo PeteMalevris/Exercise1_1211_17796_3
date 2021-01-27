@@ -11,8 +11,8 @@ package ca.sheridancollege.week2.softwarefundamentals.exercise1;
  * for the match to the user's card. To be used as starting code in ICE 1
  * @author dancye
  */
-import java.util.Scanner;
 
+import java.util.Scanner;
 
 public class CardTrick {
     
@@ -40,31 +40,18 @@ public class CardTrick {
             //System.out.println("Suit = " + (int)random_suit);                           //TODO delete - print generated card suit
         }
         
-        //insert code to ask the user for Card value and suit, create their card
-        Card user_card = new Card();
-        
-        System.out.print("Pick a card value from 1 to 13: ");
-        value = input.nextInt();
-        
-        System.out.println("Pick a Suit (0-3):\n"
-                + "[0]Heats\n"
-                + "[1]Diamonds\n"
-                + "[2]Spades\n"
-                + "[3]Clubs");
-        System.out.print("Suit: ");
-        suit = input.nextInt();
-        
-        user_card.setValue(value);
-        user_card.setSuit(user_card.SUITS[suit]);
+        Card luckyCard = new Card();
+        luckyCard.setValue(7);
+        luckyCard.setSuit(luckyCard.SUITS[2]);
         
         //add print user card
-        System.out.println("Card Picked: " + user_card.getValue() + " of " + user_card.getSuit());
-        
+        System.out.println("Card Picked: " + luckyCard.getValue() + " of " + luckyCard.getSuit());
+
         // and search magicHand here
         boolean found = false;
         for (int j = 0; j<magicHand.length; j++)
         {
-            if(user_card.getValue() == magicHand[j].getValue() && user_card.getSuit() == magicHand[j].getSuit())
+            if(luckyCard.getValue() == magicHand[j].getValue() && luckyCard.getSuit().equals(magicHand[j].getSuit()))
             {
                 found = true;
             }
