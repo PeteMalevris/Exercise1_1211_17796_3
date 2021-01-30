@@ -31,20 +31,13 @@ public class CardTrick {
             magicHand[i] = c;
         }
         
-        // Prompt the user to pick a card
-        System.out.print("Pick a card value between 1 and 13 (inclusive): ");
-        int value = sc.nextInt();
-        
-        System.out.print("Pick a card suit between 0 and 3 (inclusive): ");
-        int suit = sc.nextInt();
+        // Create the user's hard-coded card object
+        Card luckyCard = new Card();
+        luckyCard.setValue(5);
+        luckyCard.setSuit(Card.SUITS[3]);
         
         // Print the card to the user
-        System.out.println("The card you picked was: " + value + " of " + Card.SUITS[suit]);
-        
-        // Create the user's card object
-        Card luckyCard = new Card();
-        luckyCard.setValue(value);
-        luckyCard.setSuit(Card.SUITS[suit]);
+        System.out.println("The card you picked was: " + luckyCard.getValue() + " of " + luckyCard.getSuit());
         
         // Search the magicHand array for a matching card
         boolean found = false;
