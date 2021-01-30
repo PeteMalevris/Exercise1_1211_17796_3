@@ -41,9 +41,26 @@ public class CardTrick {
         // Print the card to the user
         System.out.println("The card you picked was: " + value + " of " + Card.SUITS[suit]);
         
-        //insert code to ask the user for Card value and suit, create their card
-        // and search magicHand here
-        //Then report the result here
+        // Create the user's card object
+        Card luckyCard = new Card();
+        luckyCard.setValue(value);
+        luckyCard.setSuit(Card.SUITS[suit]);
+        
+        // Search the magicHand array for a matching card
+        boolean found = false;
+        for (Card c : magicHand) {
+            if (c.getValue() == luckyCard.getValue() && c.getSuit().equals(luckyCard.getSuit())) {
+                found = true;
+                break;
+            }
+        }
+        
+        // Let the user know if their card was inside the magic hand or not
+        if (found)
+            System.out.println("Your card was inside the magic hand!");
+        else
+            System.out.println("Your card was not inside the magic hand...");
+        
     }
     
 }
