@@ -3,6 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
+// Nabila Ahmed
+// Student #991 535 159
 package ca.sheridancollege.week2.softwarefundamentals.exercise1;
 
 /**
@@ -21,10 +24,16 @@ public class CardTrick {
         {
             Card c = new Card();
             //c.setValue(insert call to random number generator here)
+            c.setValue(i);
             //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
+            c.setSuit(Card.SUITS[i]);
         }
         
         //insert code to ask the user for Card value and suit, create their card
+        
+        Card userCard = new Card();
+        userCard.setValue(2);
+        userCard.setSuit(Card.SUITS[2]);
         // and search magicHand here
         //Then report the result here
     }
