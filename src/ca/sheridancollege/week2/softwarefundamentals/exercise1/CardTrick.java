@@ -35,10 +35,19 @@ public class CardTrick {
         userCard.setValue(2);
         userCard.setSuit(Card.SUITS[2]);
         
+
         // print card
         System.out.println("The card the user has entered is" + userCard.getValue() +" of " +userCard.getSuit());
         // and search magicHand here
+        for (int i=0; i<magicHand.length; i++){
+            
+            if (magicHand[i]== userCard)
         //Then report the result here
+                System.out.println("Your card: " +userCard.getValue()+ " of " +userCard.getSuit()+ " is a winning card!");
+            else 
+                System.out.println("Your card: " +userCard.getValue()+ " of " +userCard.getSuit()+ "does not match, try again.");
+                        
+                }              
     }
     
 }
