@@ -34,6 +34,9 @@ public class CardTrick {
         Card userCard = new Card();
         userCard.setValue(2);
         userCard.setSuit(Card.SUITS[2]);
+        
+        // print card
+        System.out.println("The card the user has entered is" + userCard.getValue() +" of " +userCard.getSuit());
         // and search magicHand here
         //Then report the result here
     }
